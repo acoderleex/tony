@@ -2,7 +2,6 @@
 
 import { EventEmitter} from 'events';
 import assign from 'object-assign';
-// import uniqid from 'uniqid';
 
 import AppDispatcher from '../dispatchers/appdispatcher';
 import CalculatorConstants from '../constants/CalculatorConstants'

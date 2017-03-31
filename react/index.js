@@ -12,6 +12,7 @@ import {
 import Main from './componment/main';
 import Mall from './componment/mall';
 import User from './componment/user';
+import Finace from './componment/finace';
 import TabbarItem from './views/tabbaritem';
 import assign from 'object-assign';
 
@@ -30,6 +31,7 @@ var ROUTE_STACK=[
   _getRandomRoute('Main'),
   _getRandomRoute('Mall'),
   _getRandomRoute('User'),
+  _getRandomRoute('Finace'),
 ];
 
 class  TonyFilm extends Component {
@@ -86,6 +88,15 @@ class  TonyFilm extends Component {
                         this.onTabIndex(2);
                         this.setState({tabIndex:2});
                       }}/>
+
+                    <TabbarItem
+                      underlayColor="#B5B5B5"
+                      image={require("./image/me.png")}
+                      title="理财"
+                      onPress={()=>{
+                          this.onTabIndex(3);
+                          this.setState({tabIndex:3});
+                    }}/>
               </View>
       </View>
     );
@@ -97,6 +108,7 @@ class  TonyFilm extends Component {
         <Main {...route.params}/>,
         <Mall {...route.params}/>,
         <User {...route.params}/>,
+        <Finace {...route.params}/>,
     ];
 
     return(
