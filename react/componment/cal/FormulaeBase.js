@@ -24,7 +24,7 @@ class FormulaeBase extends Component {
   componentDidMount(){
     CalculatorStore.addChangeLister(this._onChange);
   }
-  componentWillUnMount(){
+  componentWillUnmount(){
     CalculatorStore.removeChangeLister(this._onChange);
   }
 

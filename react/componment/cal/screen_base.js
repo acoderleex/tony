@@ -22,7 +22,7 @@ class ScreenBase extends Component {
     CalculatorStore.addChangeLister(this._onChange);
   }
 
-  componentWillUnMount(){
+  componentWillUnmount(){
     CalculatorStore.removeChangeLister(this._onChange);
   }
   _onChange(){

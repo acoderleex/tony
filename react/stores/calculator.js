@@ -33,7 +33,7 @@ var CalculatorStore = assign({},EventEmitter.prototype ,{
       this.on(CHANGE_EVENT,callBack);
     },
     removeChangeLister: function(callBack){
-      this.removeChangeLister(CHANGE_EVENT,callBack);
+      this.removeListener(CHANGE_EVENT,callBack);
     },
     getDisplayFormulae:function(){
       var maxNumberOfChar=32;
