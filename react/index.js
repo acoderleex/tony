@@ -20,6 +20,16 @@ import TabbarItemStyle from './style/tab';
 
 var routeIndex = 0;
 
+
+import i18n from 'react-native-i18n';
+i18n.fallbacks = true;
+import Translation from './i18n/translation.json';
+global.translate=(...args)=>{
+  i18n.translations = Translation
+  return i18n.t(args);
+};
+
+
 var _getRandomRoute = function (str) {
   return{
     randNumber: str,

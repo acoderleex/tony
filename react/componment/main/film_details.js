@@ -5,10 +5,6 @@ import {StyleSheet, ListView, Text, View} from 'react-native';
 import ToolBar, {ToolbarFilm} from '../../views/toolbar';
 import assign from 'object-assign';
 import CommonStyle from '../../style/common';
-import i18n from 'react-native-i18n';
-i18n.fallbacks = true;
-import Translation from '../../i18n/translation.json';
-i18n.translations = Translation;
 
 var id,
     name,
@@ -40,7 +36,7 @@ class FilmDetails extends Component {
         return (
             <View style={styles.containerHome}>
                 <ToolBar {...this.props} navigator={this.props.navigator}/>
-                <Text style={styles.welcome}>{i18n.t('Main.navigate')}</Text>
+                <Text style={styles.welcome}>{translate('Header.update_state')}</Text>
             </View>
         );
     }
