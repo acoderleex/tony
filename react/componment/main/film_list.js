@@ -75,12 +75,12 @@ class FilmList extends Component {
 
   _onPress(id,num){
     this.props.navigator.push({
-        // name: 'film_details',
-        // component:FilmDetails,
-        // params: {
-        //   id: id,
-        //   name: num
-        // }
+        name: 'film_details',
+        component:FilmDetails,
+        params: {
+          id: id,
+          name: num
+        }
     });
   }
   fetchData(){
