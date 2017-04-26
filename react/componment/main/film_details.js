@@ -36,7 +36,7 @@ class FilmDetails extends Component {
         return (
             <View style={styles.containerHome}>
                 <ToolBar {...this.props} navigator={this.props.navigator}/>
-                <Text style={styles.welcome}>{translate('Header.update_state')}</Text>
+                <Text style={styles.welcome}>{translate('Header.update_state')}   {this.props.name}</Text>
             </View>
         );
     }
